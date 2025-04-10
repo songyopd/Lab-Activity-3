@@ -11,14 +11,14 @@ class BankAccount {
  
     // Encapsulation: Getter and Setter methods
     public String getAccountHolderName() {
-        return accountHolderName; // Fixed 'retunr' typo
-    }
+        return accountHolderName; 
+
  
     public void setAccountHolderName(String accountHolderName) {
-        this.accountHolderName = accountHolderName; // Fixed logic (was using return instead of setting the value)
+        this.accountHolderName = accountHolderName; 
     }
  
-    public double getBalance() { // Fixed method name typo ('get balanace')
+    public double getBalance() {
         return balance;
     }
  
@@ -36,7 +36,7 @@ class BankAccount {
     public void withdraw(double amount) {
         if (amount > 0 && amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrawn: " + amount); // Fixed 'system' to 'System'
+            System.out.println("Withdrawn: " + amount); 
         } else {
             System.out.println("Invalid withdrawal amount or insufficient balance");
         }
@@ -45,7 +45,7 @@ class BankAccount {
     // Polymorphism: Method Overriding
     public void displayAccountDetails() {
         System.out.println("Account Holder: " + accountHolderName);
-        System.out.println("Balance: " + balance); // Added missing semicolon
+        System.out.println("Balance: " + balance); 
     }
 }
  
@@ -55,7 +55,7 @@ class SavingsAccount extends BankAccount {
  
     // Constructor
     public SavingsAccount(String accountHolderName, double initialBalance, double interestRate) {
-        super(accountHolderName, initialBalance); // Fixed 'intialBalance' typo
+        super(accountHolderName, initialBalance);
         this.interestRate = interestRate;
     }
  
@@ -88,9 +88,9 @@ class CurrentAccount extends BankAccount {
         if (amount > 0 && (getBalance() + overdraftLimit) >= amount) {
             double newBalance = getBalance() - amount;
             if (newBalance < 0) {
-                overdraftLimit += newBalance; // Reduce overdraft limit
+                overdraftLimit += newBalance; 
             }
-            deposit(-amount); // Adjust balance
+            deposit(-amount); 
         } else {
             System.out.println("Invalid withdrawal amount or overdraft limit exceeded");
         }
