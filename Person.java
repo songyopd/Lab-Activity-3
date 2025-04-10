@@ -10,7 +10,7 @@ public class Person {
 
     }
 
-    public String getName() {
+    /*public String getName() {
         return this.name;
     }
 
@@ -24,7 +24,7 @@ public class Person {
 
     public void setId(int id) {
         this.id = id;
-    }
+    }*/
 
 
     public void displayInfo() {
@@ -42,7 +42,7 @@ class SchoolTest {
             Teacher teacher = new Teacher("SirChie", 0052, "OOP");
             teacher.displayInfo();
      
-            Staff staff = new Staff("Jin Suarez", 0341, "SACE");
+            Staff staff = new Staff("Jin Suarez", 1089619, "SACE");
             staff.displayInfo();
         }
     }
